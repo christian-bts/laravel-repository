@@ -3,6 +3,7 @@
 ## v2.7.0
 
 + Remove support for PHP 8.0 (end of life)
++ Remove support for Laravel 9 and below
 + Add support for PHP 8.4 implicitly nullable parameter declaration deprecation.
 
 ## v2.6.0
