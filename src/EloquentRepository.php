@@ -38,7 +38,7 @@ abstract class EloquentRepository implements RepositoryInterface
      * @param int|null $limit
      * @return LengthAwarePaginator
      */
-    public function paginate(int $limit = null): LengthAwarePaginator
+    public function paginate(?int $limit = null): LengthAwarePaginator
     {
         return $this->builder()->paginate($limit ?? $this->paginationLimit);
     }
@@ -66,7 +66,7 @@ abstract class EloquentRepository implements RepositoryInterface
      * @param string|null $column
      * @return Collection
      */
-    public function findMany(array $ids, string $column = null): Collection
+    public function findMany(array $ids, ?string $column = null): Collection
     {
         $column = $column ?? $this->getModelPrimaryKey();
 
@@ -133,7 +133,7 @@ abstract class EloquentRepository implements RepositoryInterface
      * @param string|null $column
      * @return bool
      */
-    public function updateMany(array $data, array $ids, string $column = null): bool
+    public function updateMany(array $data, array $ids, ?string $column = null): bool
     {
         $column = $column ?? $this->getModelPrimaryKey();
 
@@ -170,7 +170,7 @@ abstract class EloquentRepository implements RepositoryInterface
      * @param string|null $column
      * @return mixed
      */
-    public function deleteMany(array $ids, string $column = null): void
+    public function deleteMany(array $ids, ?string $column = null): void
     {
         $column = $column ?? $this->getModelPrimaryKey();
 
@@ -187,7 +187,7 @@ abstract class EloquentRepository implements RepositoryInterface
      * @param string|null $column
      * @return int
      */
-    public function getNextAutoIncrement(string $column = null): int
+    public function getNextAutoIncrement(?string $column = null): int
     {
         $column = $column ?? $this->getModelPrimaryKey();
 

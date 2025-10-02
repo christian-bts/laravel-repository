@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.7.0
+
++ Remove support for PHP 8.0 (end of life)
++ Add support for PHP 8.4 implicitly nullable parameter declaration deprecation.
+
 ## v2.6.0
 
 + Add support for Laravel 12

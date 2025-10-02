@@ -21,7 +21,7 @@ interface RepositoryInterface
      * @param int|null $limit
      * @return LengthAwarePaginator
      */
-    public function paginate(int $limit = null): LengthAwarePaginator;
+    public function paginate(?int $limit = null): LengthAwarePaginator;
 
     /**
      * Find a Model by its Primary Key
@@ -64,7 +64,7 @@ interface RepositoryInterface
      * @param string|null $column
      * @return mixed
      */
-    public function updateMany(array $data, array $ids, string $column = null);
+    public function updateMany(array $data, array $ids, ?string $column = null);
 
     /**
      * Delete a Model by its Primary Key
@@ -82,6 +82,6 @@ interface RepositoryInterface
      * @param string|null $column
      * @return mixed
      */
-    public function deleteMany(array $ids, string $column = null);
+    public function deleteMany(array $ids, ?string $column = null);
 
 }
